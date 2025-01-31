@@ -1,0 +1,61 @@
+# String Calculator
+
+## Overview
+This is a simple String Calculator implemented in JavaScript using Test-Driven Development (TDD). The calculator takes a string of numbers separated by delimiters and returns their sum. It supports various delimiter formats, including custom and multiple delimiters.
+
+## Features
+- Handles an empty string and returns 0.
+- Accepts a single number and returns it.
+- Accepts multiple numbers separated by commas and returns their sum.
+- Supports new line (`\n`) as a separator.
+- Allows custom delimiters using the format `//[delimiter]\n[numbers]`.
+- Supports multi-character and multiple custom delimiters.
+- Throws an exception for negative numbers.
+
+## Installation
+Ensure you have [Node.js](https://nodejs.org/) installed, then:
+
+```sh
+# Clone the repository
+git clone <repository-url>
+cd string-calculator
+
+# Install dependencies
+npm install
+```
+
+## Running Tests
+The project uses [Jest](https://jestjs.io/) for testing. To run the test cases:
+
+```sh
+npm test
+```
+
+## Usage
+You can use the `add` function in your JavaScript code:
+
+```js
+const add = require('./stringCalculator');
+
+console.log(add("1,2,3")); // Output: 6
+```
+
+## Example Cases
+| Input | Output |
+|-------|--------|
+| `""` | `0` |
+| `"1"` | `1` |
+| `"1,2"` | `3` |
+| `"1\n2,3"` | `6` |
+| `"//;\n1;2"` | `3` |
+| `"1,-2,3,-4"` | Exception: `negative numbers not allowed -2,-4` |
+
+## License
+This project is licensed under the MIT License.
+
+## Contributing
+Feel free to fork the repository and submit pull requests for improvements!
+
+---
+**Author:** Krishnaraj Rajendran Nair
+
